@@ -28,6 +28,23 @@ public class MainActivity extends AppCompatActivity {
         edit_text_angka_pertama = findViewById(R.id.edit_text_angka_pertama);
 
         //TODO 02 Buatlah kode program untuk menambahkan event klik dari tombol kali dan tombol bagi
+        button_kali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getAngkaMasukan();
+                text_hasil.setText(String.valueOf(angka_pertama*angka_kedua));
+
+            }
+        });
+
+        button_bagi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getAngkaMasukan();
+                text_hasil.setText(String.valueOf(angka_pertama/angka_kedua));
+
+            }
+        });
 
         //TODO 03 Gunakanlah Log Cat Untuk memperbaiki kesalahan program
 
@@ -39,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 getAngkaMasukan();
-                text_hasil.setText(angka_pertama+angka_kedua);
+                text_hasil.setText(String.valueOf(angka_pertama-angka_kedua));
 
             }
         });
@@ -48,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 getAngkaMasukan();
-                text_hasil.setText(angka_pertama+angka_kedua);
+                text_hasil.setText(String.valueOf(angka_pertama+angka_kedua));
             }
         });
     }
