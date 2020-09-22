@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         //TODO 04 Gunakanlah Debugger untuk mencari kesalahan program (program berjalan dengan baik namun hasilnya salah)
 
-        //TODO 05 Buatlah Validasi input agar masukan yang di isi oleh user tidak membuat program Force Close
 
 
         button_kurang.setOnClickListener(new View.OnClickListener() {
