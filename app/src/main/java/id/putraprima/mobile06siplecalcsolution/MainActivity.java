@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 getAngkaMasukan();
-                text_hasil.setText(String.valueOf(angka_pertama/angka_kedua));
+                text_hasil.setText(String.valueOf(angka_pertama / angka_kedua));
 
             }
         });
@@ -81,9 +81,5 @@ public class MainActivity extends AppCompatActivity {
             angka_pertama = Integer.parseInt(edit_text_angka_pertama.getText().toString());
             angka_kedua = Integer.parseInt(edit_text_angka_kedua.getText().toString());
         }
-
-
-//        angka_pertama = Integer.parseInt(edit_text_angka_pertama.getText().toString());
-//        angka_kedua = Integer.parseInt(edit_text_angka_kedua.getText().toString());
     }
 }
