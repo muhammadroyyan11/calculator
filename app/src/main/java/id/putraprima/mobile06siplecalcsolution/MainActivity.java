@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         button_kali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                getValidasi();
                 getAngkaMasukan();
                 text_hasil.setText(String.valueOf(angka_pertama*angka_kedua));
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         button_bagi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                getValidasi();
                 getAngkaMasukan();
                 text_hasil.setText(String.valueOf(angka_pertama/angka_kedua));
 
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         button_kurang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                getValidasi();
                 getAngkaMasukan();
                 text_hasil.setText(String.valueOf(angka_pertama-angka_kedua));
 
@@ -64,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         button_tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                getValidasi();
                 getAngkaMasukan();
                 text_hasil.setText(String.valueOf(angka_pertama+angka_kedua));
             }
@@ -74,5 +78,13 @@ public class MainActivity extends AppCompatActivity {
         //TODO 01 Buatlah kode program untuk mengambil nilai input dari edit text
         angka_pertama = Integer.parseInt(edit_text_angka_pertama.getText().toString());
         angka_kedua = Integer.parseInt(edit_text_angka_kedua.getText().toString());
+    }
+
+    public void getValidasi(){
+        if (edit_text_angka_pertama.getText().toString().length()==0){
+            edit_text_angka_pertama.setError("Angka pertama diperlukan");
+        } else if (edit_text_angka_kedua.getText().toString().length()==0){
+            edit_text_angka_kedua.setError("Angka kedua diperlukan");
+        }
     }
 }
